@@ -6,111 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
-
-    <style>
-        #dropdown {
-            display: flex;
-            flex-direction: column;
-            flex: 0 0 auto;
-        }
-        
-        #dropdown.options-hidden .options {
-            display: none;
-            transition: 0.5s;
-        }
-        
-        #dropdown:not(.options-hidden) .options {
-            transition: 0.5s;
-        }
-        
-        header {
-            display: flex;
-            flex-grow: 1;
-            background: white;
-        }
-        
-        .icon-back {
-            display: block;
-            padding: 8px;
-            margin: auto 0;
-        }
-        
-        input {
-            display: flex;
-            padding-left: 0;
-            flex: 1 1 auto;
-        }
-        
-        .options {
-            display: flex;
-            flex: 1 1 auto;
-            flex-direction: column;
-            margin-top: 4px;
-            background: #ededed;
-        }
-        
-        .option {
-            padding: 8px 12px;
-            background: white;
-        }
-        
-        .option:not(:first-child) {
-            margin-top: 4px;
-        }
-        
-        @media (max-width: 1024px) {
-            /*mobile*/
-            #dropdown:not(.options-hidden) {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                overflow: auto;
-                padding: 16px;
-            }
-            #dropdown:not(.options-hidden) .icon-back {
-                transform: rotate(90deg);
-                background: transparent;
-            }
-            .options {
-                display: flex;
-                flex: 1 1 auto;
-                overflow: auto;
-            }
-        }
-        
-        @media (min-width: 1025px) {
-            /* desktop */
-            #dropdown {
-                position: relative;
-            }
-            #dropdown:not(.options-hidden) .icon-back {
-                transform: rotate(-90deg);
-            }
-            .options {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                overflow: auto;
-                max-height: 256px;
-            }
-        }
-        
-        .option:hover {
-            background: rgb(255, 239, 239);
-        }
-        
-        .icon-back {
-            color: rgb(255, 77, 102);
-        }
-        
-         ::-webkit-scrollbar-thumb {
-            background: rgb(255, 77, 102);
-        }
-    </style>
 </head>
 
 <body>
@@ -123,7 +20,7 @@
         <section class="options"></section>
     </div>
 </body>
-<script>
+<script src="index.js">
     const NUM_OPTIONS = 35;
     const CLASS_OPTIONS_HIDDEN = "options-hidden";
     const CLASS_OPTION = "option";
