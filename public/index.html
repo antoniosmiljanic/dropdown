@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
     <script src="index.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Dropdown</h1>
-    <div id="dropdown" class="options-hidden" class="">
-        <div class="main">
-            <div class="icon-back" onclick="toggleOptions()">&#9660;</div>
-            <input type="text" id="text-input" placeholder="Select option" onmousedown="showOptions()" onblur="hideOptions()" />
-        </div>
-        <div class="options"></div>
-    </div>
-</body>
 
+    <div class="dropdown options-hidden">
+      <div class="main">
+        <div
+          class="icon-back"
+          onclick="toggleOptions(this.closest('.dropdown'))"
+        >
+          &#9660;
+        </div>
+        <input
+          type="text"
+          class="text-input"
+          placeholder="Select option"
+          onmousedown="showOptions(this.closest('.dropdown'))"
+          onblur="hideOptions(this.closest('.dropdown'))"
+        />
+      </div>
+      <div class="options options-lots"></div>
+    </div>
+
+    <div class="dropdown options-hidden centered">
+      <div class="main">
+        <div
+          class="icon-back"
+          onclick="toggleOptions(this.closest('.dropdown'))"
+        >
+          &#9660;
+        </div>
+        <input
+          type="text"
+          class="text-input"
+          placeholder="Select option"
+          onmousedown="showOptions(this.closest('.dropdown'))"
+          onblur="hideOptions(this.closest('.dropdown'))"
+        />
+      </div>
+      <div class="options options-less"></div>
+    </div>
+
+    <div class="dropdown options-hidden centered no-input">
+      <div class="main">
+        <div
+          class="icon-back"
+          onclick="toggleOptions(this.closest('.dropdown'))"
+        >
+          &#9660;
+        </div>
+        <input
+          type="text"
+          class="text-input"
+          placeholder="Select option"
+          onmousedown="showOptions(this.closest('.dropdown'))"
+          onblur="hideOptions(this.closest('.dropdown'))"
+        />
+      </div>
+      <div class="options options-less"></div>
+    </div>
+  </body>
 </html>
