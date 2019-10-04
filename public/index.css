@@ -32,7 +32,6 @@ input {
     display: flex;
     flex: 0 1 auto;
     flex-direction: column;
-    margin-top: 4px;
     background: #ededed;
     z-index: 1000;
 }
@@ -42,8 +41,9 @@ input {
     background: white;
 }
 
+.options,
 .option:not(:first-child) {
-    margin-top: 4px;
+    margin-top: 1px;
 }
 
 @media (max-width: 1024px) {
@@ -62,10 +62,6 @@ input {
         justify-content: center;
     }
 
-    .dropdown.centered.no-input:not(.options-hidden) .main {
-        display: none;
-    }
-
     .dropdown:not(.options-hidden) .icon-back {
         transform: rotate(90deg);
         background: transparent;
@@ -74,8 +70,17 @@ input {
         display: flex;
         overflow: auto;
     }
+    
     .dropdown.centered:not(.options-hidden) .options {
         flex-grow: 0;
+    }
+
+    .dropdown.height-50p:not(.options-hidden) .options {
+        max-height: 50%;
+    }
+
+    .dropdown.centered.no-input:not(.options-hidden) .main {
+        display: none;
     }
 }
 

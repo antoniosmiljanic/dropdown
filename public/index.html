@@ -35,6 +35,25 @@
       <div class="options options-lots"></div>
     </div>
 
+    <div class="dropdown options-hidden height-50p">
+      <div class="main">
+        <div
+          class="icon-back"
+          onclick="toggleOptions(this.closest('.dropdown'))"
+        >
+          &#9660;
+        </div>
+        <input
+          type="text"
+          class="text-input"
+          placeholder="Select option"
+          onmousedown="showOptions(this.closest('.dropdown'))"
+          onblur="hideOptions(this.closest('.dropdown'))"
+        />
+      </div>
+      <div class="options options-lots"></div>
+    </div>
+
     <div class="dropdown options-hidden centered">
       <div class="main">
         <div
